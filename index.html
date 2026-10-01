@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosé Boutique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Rosé Boutique</h1>
+        <p>Productos para ti</p>
+    </header>
+
+    <nav>
+        <button>Inicio</button>
+        <button>Productos</button>
+        <button id="verCarrito">🛒 Carrito (<span id="cantidad">0</span>)</button>
+    </nav>
+
+    <main>
+        <h2>Productos</h2>
+
+        <section class="productos">
+            <article class="producto">
+                <p class="emoji">💄</p>
+                <h3>Labial Rosado</h3>
+                <p>$25.000</p>
+                <button onclick="agregarCarrito('Labial Rosado', 25000)">Agregar</button>
+            </article>
+
+            <article class="producto">
+                <p class="emoji">🌸</p>
+                <h3>Perfume Floral</h3>
+                <p>$45.000</p>
+                <button onclick="agregarCarrito('Perfume Floral', 45000)">Agregar</button>
+            </article>
+
+            <article class="producto">
+                <p class="emoji">🧴</p>
+                <h3>Crema Facial</h3>
+                <p>$30.000</p>
+                <button onclick="agregarCarrito('Crema Facial', 30000)">Agregar</button>
+            </article>
+
+            <article class="producto">
+                <p class="emoji">🎀</p>
+                <h3>Set de Accesorios</h3>
+                <p>$35.000</p>
+                <button onclick="agregarCarrito('Set de Accesorios', 35000)">Agregar</button>
+            </article>
+        </section>
+
+        <section id="carrito">
+            <h2>Carrito de compras</h2>
+            <article id="listaCarrito"></article>
+            <p>Total: $<span id="total">0</span></p>
+            <button onclick="vaciarCarrito()">Vaciar carrito</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Rosé Boutique - Compras con estilo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
